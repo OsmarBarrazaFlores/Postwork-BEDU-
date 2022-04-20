@@ -1,0 +1,45 @@
+PLAN DE PRUEBAS
+
+EQUIPO
+Roberto Valdivia
+Cruz Gil
+Dalyn Lara
+Osmar Barraza
+
+18 de abril de 2022
+
+Introducción
+En este documento se exponen los objetivos definidos para comprobar que la función de autenticación añadida al ejercicio de la sesión 04 fue exitosa, así mismo, definir los alcances y las pruebas que se implementaran a la misma.
+
+OBJETIVOS:
+Definir cuál será el plan de pruebas a seguir.
+Describir los casos de uso en formato GIVEN, WHEN, THEN.
+Proteger el endpoint contra ataques de fuerza bruta
+Diseñar pruebas unitarias, de integración y funcionales.
+Llevar a cabo las pruebas.
+
+ALCANCES
+Se realizaron los casos de uso.
+Se implementaron las funciones definidas mediante los casos de uso.
+Se diseñaron las pruebas unitarias, de integración y funcionales.
+Se realizaron las pruebas unitarias, de integración y funcionales.
+
+CASOS DE USO
+Given un usuario When ingresa sus credenciales correctas Then obtiene un token que contiene sus credenciales y sus permisos.
+Given un usuario When ingresa sus credenciales correctas Then tiene acceso al sistema.
+Given un usuario When ingresa sus credenciales incorrectas Then se le informa que ha cometido un error.
+Given un usuario When ingresa sus credenciales incorrectas más de tres veces Then se le bloquea el acceso al login por cinco minutos.
+
+PRUEBAS:
+
+UNITARIAS:
+Se realizaron pruebas para corroborar que la función de getToken() codifique la información enviada con base64.
+Se realizaron pruebas para corroborar que la función que comprueba los intentos de ingresar la contraseña, funcionara.
+Se realizaron pruebas para verificar que la función de login funcionara correctamente.
+
+INTEGRACIÓN:
+Se crearon pruebas para probar que la función TestLogin llamara correctamente a Login.
+Se corroboró que Login llamara de manera correcta a getToken()
+
+FUNCIONALES:
+Se probo que la aplicación enviara los datos del usuario y devolviera los las credenciales junto con los privilegio de manera cifrada utilizando base64.
