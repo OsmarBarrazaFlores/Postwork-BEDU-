@@ -1,0 +1,6 @@
+
+
+- GIVEN Un usuario WHEN Ingresa credenciales invalidas THEN Obtiene un mensaje con la siguiente leyenda "Favor de verificar sus datos".
+- GIVEN Un usuario WHEN Ingresa credenciales válidas THEN Acceder al sistema.
+- Given Un usario WHEN  Ingresa sus credenciales THEN Sus datos se codifican.
+- GIVEN Un usuario When Ingresa credenciales invalidas en 3 ocasiones THEN bloquear intentos por 5 minutos.
